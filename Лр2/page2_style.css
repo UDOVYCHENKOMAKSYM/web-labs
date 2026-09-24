@@ -1,0 +1,29 @@
+body {
+    background-color: rgb(149, 255, 142);
+}
+a {
+    color: rgb(1, 138, 1);
+}
+span {
+    font-weight: italic;
+}
+.before_last_word_italic_red span {
+  color: red;           /* червоний колір */
+  font-style: italic;   /* курсивний шрифт */
+}
+.p_blue_underline {
+  color: rgb(36, 153, 203);
+  text-decoration: underline;
+}
+.p_underline {
+  text-decoration: underline;
+}
+.img_left {
+  float: left;
+  height: 260px;
+  width: auto;
+}
+.img_right {
+  float: right;
+  width: 35%;
+}
