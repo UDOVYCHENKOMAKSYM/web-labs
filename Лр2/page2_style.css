@@ -8,8 +8,8 @@ span {
     font-weight: italic;
 }
 .before_last_word_italic_red span {
-  color: red;           /* червоний колір */
-  font-style: italic;   /* курсивний шрифт */
+  color: red;           
+  font-style: italic;  
 }
 .p_blue_underline {
   color: rgb(36, 153, 203);
