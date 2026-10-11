@@ -1,0 +1,13 @@
+.sidebar {
+    width: var(--width-sidebar);
+    float: left;
+    clear: both;
+    /*height: 2165px;*/
+    padding: var(--padding-text);
+}
+.sidebar .h2 {
+    margin-bottom: 10px;
+}
+.sidebar .p {
+    margin-bottom: 20px;
+}

@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "PlayfairDisplay";
+  src: url("fonts/PlayfairDisplay-VariableFont_wght.ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PTSans";
+  src: url("fonts/PTSans-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+:root {
+  /* Кольори */
+  --color-bg: #f4efea;
+  --color-title: #2e241e;
+  --color-text: #6b5b4e;
+  /* Шрифти та їх розміри */
+  --font-family-title: "PlayfairDisplay";
+  --font-family-text: "PTSans";
+  --font-size-title: 32px;
+  --font-size-text: 20px;
+  /* Розміри сайту */
+  --width: 1440px;
+  --width-sidebar: 480px;
+  --width-main: 960px;
+  --width-title: 720px;
+  --height-header: 80px;
+  --width-menu: 720px;
+  --height-footer: 60px;
+  --img-width: 275px;
+  --img-height: 290px;
+  /* Відступи */
+  --padding-menu: 51px;
+  /* Поля для текстових блоків */
+  --padding-text: 41px;
+  --img-hover-width: 300px;
+  --img-hover-height: 316px;
+}

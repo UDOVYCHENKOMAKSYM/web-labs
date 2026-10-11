@@ -1,0 +1,6 @@
+.footer {
+    height: var(--height-footer);
+    clear: both;
+    text-align: center;
+    padding-top: 15px;
+}

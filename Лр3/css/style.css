@@ -1,0 +1,40 @@
+@import url(reset.css);
+@import url(base.css);
+@import url(menu.css);
+@import url(header.css);
+@import url(sidebar.css);
+@import url(content.css);
+@import url(footer.css);
+body {
+  margin: auto;
+  max-width: var(--width);
+}
+.container {
+  width: var(--width);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-family-text);
+  font-size: var(--font-size-text);
+  /*height: 2305px;*/
+}
+.text_border {
+  text-shadow:
+    1px 0 1px var(--color-title),
+    0 1px 1px var(--color-title),
+    -1px 0 1px var(--color-title),
+    0 -1px 1px var(--color-title);
+}
+.h2 {
+  font-family: var(--font-family-title);
+  font-size: var(--font-size-title);
+  color: var(--color-title);
+  font-weight: 600;
+}
+.p {
+  font-family: var(--font-family-text);
+  font-size: var(--font-size-text);
+  color: var(--color-text);
+}
+html {
+  scroll-behavior: smooth;
+}
