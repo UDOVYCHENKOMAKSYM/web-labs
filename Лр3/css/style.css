@@ -5,17 +5,18 @@
 @import url(sidebar.css);
 @import url(content.css);
 @import url(footer.css);
+@import url(media.css);
 body {
   margin: auto;
   max-width: var(--width);
 }
 .container {
-  width: var(--width);
+  max-width: var(--width);
   background-color: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-family-text);
   font-size: var(--font-size-text);
-  /*height: 2305px;*/
+  margin: auto;
 }
 .text_border {
   text-shadow:
@@ -37,4 +38,23 @@ body {
 }
 html {
   scroll-behavior: smooth;
+}
+.flex {
+  display: flex;
+  gap: 10px;
+}
+.flex_wrap {
+  flex-wrap: wrap;
+}
+.flex_align_center {
+  align-items: center;
+}
+.flex_justify_center {
+  justify-content: center;
+}
+.flex_column {
+  flex-direction: column;
+}
+.flex_justify_space {
+  justify-content: space-between;
 }

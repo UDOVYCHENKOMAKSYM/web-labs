@@ -1,13 +1,12 @@
 .sidebar {
-    width: var(--width-sidebar);
-    float: left;
-    clear: both;
-    /*height: 2165px;*/
-    padding: var(--padding-text);
+  max-width: var(--width-sidebar);
+  align-self: flex-start;
 }
 .sidebar .h2 {
-    margin-bottom: 10px;
+  text-align: center;
+  margin-bottom: 13px;
 }
 .sidebar .p {
-    margin-bottom: 20px;
+  margin-bottom: 13px; 
+  padding-left: 10px;
 }

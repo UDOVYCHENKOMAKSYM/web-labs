@@ -5,7 +5,7 @@ a {
     color: rgb(1, 138, 1);
 }
 .before_last_word_italic_red span {
-  color: red;           
+            
   font-style: italic;  
 }
 .p_blue_underline {
@@ -23,4 +23,7 @@ a {
 .img_right {
   float: right;
   width: 35%;
+}
+p span {
+  color: rgb(208, 255, 0);
 }
