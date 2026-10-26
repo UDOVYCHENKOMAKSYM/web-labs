@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Лабораторна робота 5 - Завдання 2.1</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="task2.1.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Лабораторна робота з JavaScript</h1>
+        <div class="student-info">
+          <p><b>ПІБ:</b> Удовиченко Максим</p>
+          <p><b>Група:</b> КН-31</p>
+          <p><b>Варіант:</b> № 2</p>
+        </div>
+      </header>
+
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="task1.html">Завдання 1</a></li>
+          <li><a href="task2.1.html" class="active">Завдання 2.1</a></li>
+          <li><a href="task2.2.html">Завдання 2.2</a></li>
+        </ul>
+      </nav>
+
+      <main>
+        <h2>Завдання 2.1: Введення країн</h2>
+        <p class="task-description">
+          <b>Умова:</b> У поле вводу вводиться країна і натискається Enter. При
+          натисканні на Enter зробіть так, щоб введені країни записувалися в
+          абзац під поле вводу через кому. Тобто по кожному натисканню Enter в
+          абзац будуть додаватися все нові і нові країни.
+        </p>
+        
+        <hr class="task-divider" />
+
+        <div class="form-group">
+          <label for="countryInput" class="form-label">Введіть назву країни:</label>
+          <input
+            type="text"
+            id="countryInput"
+            placeholder="Введіть країну та натисніть Enter"
+            class="country-input-field"
+          />
+        </div>
+
+        <h3 class="output-title">Список країн:</h3>
+        <p id="countriesOutput" class="countries-output-box"></p>
+      </main>
+    </div>
+
+    <script src="task2.1.js"></script>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Лабораторна робота 5 - Завдання 2.2</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="task2.2.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Лабораторна робота з JavaScript</h1>
+        <div class="student-info">
+          <p><b>ПІБ:</b> Удовиченко Максим</p>
+          <p><b>Група:</b> КН-31</p>
+          <p><b>Варіант:</b> № 2</p>
+        </div>
+      </header>
+
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="task1.html">Завдання 1</a></li>
+          <li><a href="task2.1.html">Завдання 2.1</a></li>
+          <li><a href="task2.2.html" class="active">Завдання 2.2</a></li>
+        </ul>
+      </nav>
+
+      <main>
+        <h2>Завдання 2.2: Числа з таблиці</h2>
+        <p class="task-description">
+          <b>Умова:</b> Дана таблиця з числами. При натисканні на кнопку в поле
+          введення під таблицею відобразіть числа з таблиці. Виведення виконати
+          через кому в порядку зростання чисел.
+        </p>
+        <hr class="task-divider" />
+
+        <!-- Таблиця з числами -->
+        <table class="result-table" id="numberTable">
+          <tr>
+            <td>45</td>
+            <td>12</td>
+            <td>78</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>25</td>
+            <td>56</td>
+          </tr>
+          <tr>
+            <td>19</td>
+            <td>88</td>
+            <td>34</td>
+          </tr>
+        </table>
+
+        <button class="btn" id="processBtn">Обробити числа</button>
+
+        <div class="form-group">
+          <label for="resultInput" class="form-label">Результат (у порядку зростання):</label>
+          <input
+            type="text"
+            id="resultInput"
+            placeholder="Тут з'являться числа..."
+            class="number-input-field"
+          />
+        </div>
+      </main>
+    </div>
+
+    <script src="task2.2.js"></script>
+  </body>
+</html>

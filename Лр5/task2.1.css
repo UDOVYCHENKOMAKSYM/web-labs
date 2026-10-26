@@ -1,0 +1,49 @@
+.task-divider {
+  margin: 20px 0;
+  border: none;
+  border-top: 1px solid #ecf0f1;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.country-input-field {
+  padding: 8px 12px;
+  width: 100%;
+  max-width: 350px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.country-input-field:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+.output-title {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #2c3e50;
+}
+
+.countries-output-box {
+  font-size: 16px;
+  color: #333;
+  min-height: 24px;
+  padding: 10px;
+  background: #f9f9f9;
+  border-radius: 4px;
+  border: 1px solid #e5e7eb;
+  word-break: break-word;
+}

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Лабораторна робота 5 - Завдання 1</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="task1.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Лабораторна робота з JavaScript</h1>
+        <div class="student-info">
+          <p><b>ПІБ:</b> Удовиченко Максим</p>
+          <p><b>Група:</b> КН-31</p>
+          <p><b>Варіант:</b> № 2</p>
+        </div>
+      </header>
+
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="task1.html" class="active">Завдання 1</a></li>
+          <li><a href="task2.1.html">Завдання 2.1</a></li>
+          <li><a href="task2.2.html">Завдання 2.2</a></li>
+        </ul>
+      </nav>
+
+      <main>
+        <h2>Завдання 1: Розклад концертів</h2>
+        <p class="task-description">
+          <b>Умова:</b> Створити масиви значень (виконавець, місце проведення,
+          дата). Квиток потрібно придбати за 5 днів до концерту. Вивести
+          повідомлення про те, що сьогодні останній термін придбання квитка, чи
+          сьогодні йде концерт. Якщо не вказано місце проведення концерту,
+          вивести додаткове повідомлення «Невідома адреса проведення концерту».
+        </p>
+        
+        <hr class="task-divider" />
+
+        <h2 class="result-title">Результат виконання завдання</h2>
+        <div id="rezult"></div>
+    
+        <button class="btn" id="runTask1">Перевірити концерти</button>
+      </main>
+    </div>
+
+    <script src="task1.js"></script>
+  </body>
+</html>
