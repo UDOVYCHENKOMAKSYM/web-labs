@@ -46,10 +46,10 @@ function vivod(item, i, array) {
   let rowStyle = "";
   let message = "";
 
-  if (diffDays === 0) {
+  if (diffDays == 0) {
     message = "Сьогодні йде концерт!";
     rowStyle = "style='background:yellow;'";
-  } else if (diffDays === 5) {
+  } else if (diffDays == 5) {
     message = "Сьогодні останній термін придбання квитка!";
     rowStyle = "style='background:yellow;'";
   } else if (diffDays > 0) {

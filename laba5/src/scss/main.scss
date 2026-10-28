@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+// Кольори
+$dark-blue: #2C3E50;
+$teal: #2A7B78;
+$teal-light: #E6F2F1;
+$page-bg: #F7F9FB;
+$white: #FFFFFF;
+$border: #D9DEE3;
+$row-border: #E6EAEE;
+$muted: #6B7785;
+
+// Кольори статусів
+$red: #C0392B;
+$red-bg: #FADBD8;
+$yellow: #9A6B00;
+$yellow-bg: #FFF3CD;
+$gray-status: #5F6B76;
+$gray-status-bg: #ECEFF2;
+$success: #1E7B4A;
+$success-bg: #E3F4EA;
+
+// Розміри
+$width: 1440px;
+$content-width: 1280px;
+$header-height: 72px;
+$row-height: 52px;
+$thead-height: 44px;
+$input-height: 44px;
+
+// Розміри шрифтів
+$p-font-size: 14px;
+$p-font-size-small: 12px;
+$h1-font-size: 20px;
+$h2-font-size: 20px;
+$th-font-size: 13px;
+
+// Відступи
+$margin: 24px;
+$padding-card: 24px;
+$radius: 8px;
+$radius-small: 6px;
+
+html {
+  font-size: $p-font-size;
+  color: $dark-blue;
+  background-color: $page-bg;
+}
+
+body {
+  max-width: $width;
+  margin: auto;
+  font-family: 'Inter', sans-serif;
+}
+
+// Шапка
+header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  height: $header-height;
+  padding: 0 80px;
+  background-color: $dark-blue;
+  color: $white;
+
+  h1 {
+    font-size: $h1-font-size;
+    font-weight: 600;
+  }
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  border-radius: $radius;
+}
+
+// Меню
+nav {
+  display: flex;
+  gap: 8px;
+  max-width: $content-width;
+  margin: $margin auto;
+
+  a {
+    padding: 12px 20px;
+    border: 1px solid $border;
+    border-radius: $radius;
+    background-color: $white;
+    color: $dark-blue;
+    font-weight: 600;
+    text-decoration: none;
+
+    &:hover,
+    &.active {
+      background-color: $teal;
+      border-color: $teal;
+      color: $white;
+    }
+  }
+}
+
+main {
+  max-width: $content-width;
+  margin: 0 auto;
+}
+
+// Блоки-картки
+.card {
+  margin-bottom: $margin;
+  padding: $padding-card;
+  background-color: $white;
+  border-radius: $radius;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+  h2 {
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid $border;
+    font-size: $h2-font-size;
+    font-weight: 600;
+  }
+}
+
+// Панель дій
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+// Фільтр
+.filter {
+  display: flex;
+
+  button {
+    padding: 10px 16px;
+    border: 1px solid $border;
+    background-color: $white;
+    color: $dark-blue;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:first-child { border-radius: $radius-small 0 0 $radius-small; }
+    &:last-child { border-radius: 0 $radius-small $radius-small 0; }
+
+    &.active {
+      background-color: $teal;
+      border-color: $teal;
+      color: $white;
+    }
+  }
+}
+
+// Кнопки
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: $radius;
+  background-color: $teal;
+  color: $white;
+  font-weight: 600;
+  cursor: pointer;
+
+  &:hover { background-color: mix(#000, $teal, 6%); }
+
+  &:disabled {
+    background-color: $border;
+    color: $muted;
+    cursor: not-allowed;
+  }
+}
+
+// Таблиці
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid $row-border;
+
+  th {
+    height: $thead-height;
+    padding: 0 16px;
+    background-color: $dark-blue;
+    color: $white;
+    font-size: $th-font-size;
+    font-weight: 600;
+    text-align: left;
+  }
+
+  td {
+    height: $row-height;
+    padding: 0 16px;
+    border-bottom: 1px solid $row-border;
+  }
+
+  tbody tr:nth-child(even) { background-color: $page-bg; }
+  tbody tr.selected { background-color: $teal-light; }
+
+  .num { text-align: right; }
+  .check { width: 56px; text-align: center; }
+}
+
+// Статуси
+.status {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: $p-font-size-small;
+  font-weight: 600;
+
+  &.expired { color: $red; background-color: $red-bg; }
+  &.warning { color: $yellow; background-color: $yellow-bg; }
+  &.normal { color: $gray-status; background-color: $gray-status-bg; }
+}
+
+.counter {
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+// Форми
+.form-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  label {
+    font-weight: 500;
+    font-size: $th-font-size;
+  }
+
+  input {
+    height: $input-height;
+    padding: 0 12px;
+    border: 1px solid $border;
+    border-radius: $radius-small;
+    font-size: $p-font-size;
+
+    &:focus {
+      outline: none;
+      border: 2px solid $teal;
+    }
+
+    &.error { border-color: $red; }
+  }
+
+  .hint {
+    font-size: $p-font-size-small;
+    color: $muted;
+  }
+
+  .error-text {
+    font-size: $p-font-size-small;
+    color: $red;
+  }
+}
+
+.message-success {
+  padding: 10px 16px;
+  border-radius: $radius-small;
+  background-color: $success-bg;
+  color: $success;
+}
+
+// Адаптивність (планшет)
+@media (max-width: 1024px) {
+  header { padding: 0 $margin; }
+
+  main,
+  nav { padding: 0 $margin; }
+
+  nav { flex-wrap: wrap; }
+  .form-row { flex-wrap: wrap; }
+
+  .table-wrap { overflow-x: auto; }
+
+  .btn,
+  .filter button,
+  .field input { min-height: 44px; }
+}
