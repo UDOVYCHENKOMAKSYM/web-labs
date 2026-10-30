@@ -1,0 +1,67 @@
+<section class="flex">
+  <div class="content">
+    <h2>Завдання</h2>
+    <p>
+      Базовий клас: Товар (поля: кількість, ціна, метод: вартість товару)<br />
+      Нащадок: Фломастери (поля: назва, сорт, перевизначений метод розрахунку вартості товару)
+    </p>
+  </div>
+</section>
+
+<section class="flex">
+  <form class="flex flex-row flex-wrap" style="justify-content: center; gap: 20px;">
+    
+    <fieldset class="flex flex-column" style="min-width: 240px; padding: 12px;">
+      <legend>Товар</legend>
+      
+      <label>Кількість:
+        <input type="number" value="10" id="amount1" min="0" step="1" #amount1 />
+      </label>
+      
+      <label>Ціна (грн):
+        <input type="number" value="50" id="price1" min="0" step="any" #price1 />
+      </label>
+    </fieldset>
+
+    <fieldset class="flex flex-column" style="min-width: 240px; padding: 12px;">
+      <legend>Фломастери</legend>
+      
+      <label>Назва:
+        <input type="text" value="Centropen" id="name2" #name2 />
+      </label>
+      
+      <label>Кількість:
+        <input type="number" value="5" id="amount2" min="0" step="1" #amount2 />
+      </label>
+      
+      <label>Ціна (грн):
+        <input type="number" value="80" id="price2" min="0" step="any" #price2 />
+      </label>
+      
+      <label>Сорт (s):
+        <input type="number" value="2" id="s2" min="1" step="1" #s2 />
+      </label>
+    </fieldset>
+
+  </form>
+</section>
+
+<section class="flex" style="margin: 15px 0;">
+  <button 
+    class="btn" 
+    (click)="calcGoods(amount1.value, price1.value, amount2.value, price2.value, name2.value, s2.value)">
+    <span>Розрахунок</span>
+  </button>
+</section>
+
+<section class="flex flex-column" style="align-items: center; margin-top: 5px;">
+  <h2 class="gradient-text" style="margin-bottom: 5px;">Результати обрахунків</h2>
+  
+  <div class="flex flex-column" style="text-align: center;">
+    <h3 class="gradient-text" style="margin: 5px 0 2px 0;">Товар</h3>
+    <h4 style="color: #fff; margin: 0 0 5px 0;">{{ goods_show }}</h4>
+    
+    <h3 class="gradient-text" style="margin: 5px 0 2px 0;">Фломастери</h3>
+    <h4 style="color: #fff; margin: 0;">{{ markers_show }}</h4>
+  </div>
+</section>
