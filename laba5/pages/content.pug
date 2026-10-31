@@ -1,10 +1,77 @@
 main
-  article
-  section
-      h2 Налаштування періоду сповіщень
-    section
-      h2 Моніторинг термінів
-    section
-      h2 Внесення нової партії
-    section
-      h2 Акти списання
+  section.card#settings
+    h2 Налаштування періоду сповіщень
+    .field
+      label(for="period") Кількість днів до закінчення терміну
+      input#period(type="number" value="30" min="1" max="365")
+      span.hint Допустимі значення від 1 до 365
+    button.btn Зберегти
+
+  section.card#monitoring
+    h2 Моніторинг термінів
+    .actions
+      .filter
+        button.active Критичні та протерміновані
+        button Усі
+      button.btn Створити акт списання
+
+    - var batches = [{name: 'Анальгін 500мг', num: '#8821', qty: 14, date: '12.10.2026', status: 'expired', label: 'Протерміновано', selected: true}, {name: 'Парацетамол', num: '#9043', qty: 30, date: '05.11.2026', status: 'warning', label: 'Залишилось 13 днів'}, {name: 'Амоксицилін 250мг', num: '#7305', qty: 20, date: '25.10.2026', status: 'warning', label: 'Залишилось 2 дні'}, {name: 'Цитрамон', num: '#6120', qty: 40, date: '28.09.2026', status: 'expired', label: 'Протерміновано'}]
+
+    .table-wrap
+      table
+        thead
+          tr
+            th.check
+            th Назва препарату
+            th Номер партії
+            th.num Кількість
+            th Термін придатності
+            th Статус
+        tbody
+          each b in batches
+            tr(class=b.selected ? 'selected' : '')
+              td.check
+                input(type="checkbox" checked=b.selected)
+              td= b.name
+              td= b.num
+              td.num= b.qty
+              td= b.date
+              td
+                span.status(class=b.status)= b.label
+    p.counter Обрано для списання: 1 позиція
+
+  section.card#add-batch
+    h2 Внесення нової партії
+    .form-row
+      .field.wide
+        label(for="name") Назва
+        input#name(type="text")
+      .field
+        label(for="number") Номер партії
+        input#number(type="text")
+      .field
+        label(for="qty") Кількість
+        input#qty(type="number" min="1")
+      .field
+        label(for="date") Термін придатності
+        input#date(type="text" placeholder="ДД.ММ.РРРР")
+    button.btn Зберегти
+
+  section.card#acts
+    h2 Акти списання
+    - var acts = [{num: 15, date: '23.10.2026', parts: 2, total: 44}, {num: 14, date: '18.10.2026', parts: 1, total: 10}, {num: 13, date: '05.10.2026', parts: 4, total: 55}]
+    .table-wrap
+      table
+        thead
+          tr
+            th Номер акта
+            th Дата
+            th.num Кількість партій
+            th.num Загальна кількість одиниць
+        tbody
+          each a in acts
+            tr
+              td= a.num
+              td= a.date
+              td.num= a.parts
+              td.num= a.total

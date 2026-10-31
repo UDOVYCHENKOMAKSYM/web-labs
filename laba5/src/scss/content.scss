@@ -1,0 +1,207 @@
+main {
+  max-width: $content-width;
+  margin: 0 auto;
+}
+
+.card {
+  @include card;
+
+  h2 {
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid $border-color;
+    font-size: $h2-font-size;
+    font-weight: 600;
+  }
+}
+
+.btn {
+  @include button($teal, $white, $teal-dark);
+}
+
+.actions {
+  @include flex(row, space-between, center);
+  margin-bottom: 16px;
+}
+
+.filter {
+  display: flex;
+
+  button {
+    @include button($white, $dark-blue, $teal-light, $border-color);
+    padding: 10px 16px;
+    border-radius: 0;
+
+    &:first-child { border-radius: $radius-small 0 0 $radius-small; }
+    &:last-child { border-radius: 0 $radius-small $radius-small 0; }
+
+    &.active {
+      background-color: $teal;
+      border-color: $teal;
+      color: $white;
+    }
+  }
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid $row-border;
+
+  th {
+    height: $thead-height;
+    padding: 0 16px;
+    background-color: $dark-blue;
+    color: $white;
+    font-size: $th-font-size;
+    font-weight: 600;
+    text-align: left;
+  }
+
+  td {
+    height: $row-height;
+    padding: 0 16px;
+    border-bottom: 1px solid $row-border;
+  }
+
+  tbody tr:nth-child(even) { background-color: $page-bg; }
+  tbody tr.selected { background-color: $teal-light; }
+
+  .num { text-align: right; }
+  .check { width: 56px; text-align: center; }
+
+  input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: $teal;
+  }
+}
+
+// Статуси
+.status {
+  &.expired { @include status($red, $red-bg); }
+  &.warning { @include status($yellow, $yellow-bg); }
+  &.normal  { @include status($gray-status, $gray-status-bg); }
+}
+
+.counter {
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+// Форми
+.form-row {
+  @include flex(row, flex-start, flex-start, 16px);
+  margin-bottom: 16px;
+}
+
+.field {
+  @include flex(column, flex-start, stretch, 6px);
+  margin-bottom: 16px;
+
+  &.wide {
+    width: 400px;
+    max-width: 100%;
+  }
+
+  label {
+    font-size: $th-font-size;
+    font-weight: 500;
+  }
+
+  input {
+    width: 240px;
+    max-width: 100%;
+    height: $input-height;
+    padding: 0 12px;
+    border: 1px solid $border-color;
+    border-radius: $radius-small;
+    font-size: $p-font-size;
+
+    &:focus {
+      outline: none;
+      border: 2px solid $teal;
+    }
+
+    &.error { border-color: $red; }
+  }
+
+  .hint {
+    font-size: $p-font-size-small;
+    color: $muted;
+  }
+}
+
+.form-row .field {
+  margin-bottom: 0;
+
+  input { width: 100%; }
+}
+
+.btn,
+.filter button,
+.field input {
+  min-height: 44px;
+}
+
+@media (max-width: 1024px) {
+  main {
+    padding: 0 $margin;
+  }
+
+  .actions {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .form-row {
+    flex-wrap: wrap;
+
+    .field {
+      flex: 1 1 calc(50% - 16px);
+    }
+
+    .field.wide {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 0 16px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+
+    .btn {
+      width: 100%;
+    }
+  }
+
+  .filter {
+    width: 100%;
+
+    button {
+      flex: 1;
+    }
+  }
+
+  .form-row .field {
+    flex: 1 1 100%;
+  }
+
+  .field input {
+    width: 100%;
+  }
+}

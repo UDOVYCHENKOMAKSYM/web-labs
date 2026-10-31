@@ -1,0 +1,74 @@
+header {
+  .header-top {
+    @include flex(row, flex-start, center, 16px);
+    height: $header-height;
+    padding: 0 80px;
+    background-color: $dark-blue;
+    color: $white;
+  }
+
+  .logo {
+    width: 60px;
+    height: 70px;
+    border-radius: $radius;
+    background-color: $teal;
+  }
+
+  h1 {
+    font-size: $h1-font-size;
+    font-weight: 600;
+  }
+
+  nav {
+    @include flex(row, flex-start, center, 8px);
+    max-width: $content-width;
+    margin: $margin auto;
+
+    a {
+      @include button($white, $dark-blue, $teal-light, $border-color);
+      min-height: 44px;
+      text-decoration: none;
+
+      &.active {
+        background-color: $teal;
+        border-color: $teal;
+        color: $white;
+      }
+    }
+  }
+}
+
+// Планшет
+@media (max-width: 1024px) {
+  header {
+    .header-top {
+      padding: 0 $margin;
+    }
+
+    nav {
+      flex-wrap: wrap;
+      padding: 0 $margin;
+    }
+  }
+}
+
+// Смартфон
+@media (max-width: 600px) {
+  header {
+    .header-top {
+      flex-direction: column;
+      height: auto;
+      padding: 16px $margin;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 16px;
+    }
+
+    nav a {
+      flex: 1 1 100%;
+      text-align: center;
+    }
+  }
+}

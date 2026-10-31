@@ -1,2 +1,7 @@
 header
-  h1 Моніторинг термінів придатності
+  .header-top
+    img.logo(src="/logo.png" alt="Логотип")
+    h1 Система контролю термінів придатності
+  nav
+    each item in [['#settings', 'Налаштування періоду'], ['#monitoring', 'Моніторинг термінів'], ['#add-batch', 'Внести партію'], ['#acts', 'Акти списання']]
+      a(href=item[0])= item[1]
